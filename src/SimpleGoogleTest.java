@@ -14,8 +14,10 @@ public class SimpleGoogleTest {
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Testing if we can find UCSF and SFSU in google search first page using search keyword \"San Francisco\"...");
 		WebDriver wd=new FirefoxDriver();
+		Thread.sleep(1000);
 		wd.manage().window().setPosition(new Point(0,0));
    		wd.manage().window().setSize(new Dimension(1024,768));
+   		
 		wd.get("https://www.google.com");
 		Thread.sleep(4000);
 		wd.findElement(By.name("q")).sendKeys("San Francisco");
